@@ -1,0 +1,70 @@
+img {
+    display: block;
+    margin: 50px auto;
+}
+
+/* ROTACJA */
+img:nth-child(1) {
+    transform: rotate(0deg);
+    transition: all .5s;
+}
+
+img:nth-child(1):hover {
+    transform: rotateY(180deg);
+}
+
+
+/* PRZESUNIĘCIE */
+
+img:nth-child(2) {
+    transform: translate(200px, 100px);
+}
+
+
+/* SKALOWANIE */
+
+img:nth-child(3) {
+    transform: scale(1);
+    transition: all .5s;
+}
+
+img:nth-child(3):hover {
+    transform: scale(1.5);
+}
+
+
+/* ANIMACJA */
+
+img:nth-child(4) {
+    animation-name: growrotate;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    width: 100%;
+}
+@keyframes growrotate {
+    0% {
+        width: 0%;
+        transform: rotate(0deg);
+    }
+    20% {
+        width: 20%;
+        transform: rotate(90deg);
+    }
+    40% {
+        width: 40%;
+        transform: rotate(180eg);
+    }
+    60% {
+        width: 60%;
+        transform: rotate(270eg);
+    }
+    80% {
+        width: 80%;
+        transform: rotate(360deg);
+    }
+    100% {
+        width: 100%;
+        transform: rotate(180deg);
+    }
+}
